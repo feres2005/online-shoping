@@ -1,0 +1,119 @@
+.box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap
+}
+.material-icons{
+    font-size: 2.4em;
+    cursor: pointer;
+}
+.card{
+    width: 300px;
+}
+.card .card-image .card-title{
+    color: black;
+    font-weight: 400
+}
+.cart{
+    margin-top:40px;
+}
+.collection .collection-item{
+    display: flex;
+}
+.collection-item.avatar .title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #ee6e73;
+    display: block;
+    margin-bottom: 20px;
+    
+}
+.collection .collection-item img{
+    width: 150px;
+    margin-right: 25px;
+}
+.item-desc{
+    align-self:center;
+}
+
+.cart-dec{
+    color: white;
+    font-size: 20px;
+    background-attachment: fixed;
+    
+}
+
+.add-img{
+    height: 30px;
+}
+.navbar-ul li{
+display: inline;
+margin: 10px;
+font-size: 25px;
+
+
+}
+.black{
+    color:white;
+
+}
+.black:hover{
+    color:red;
+    transition: color 1s;
+    text-decoration: none;
+
+}
+.black:active{
+    color: black;
+    text-decoration: none;
+}
+.material-icons{
+    color: red;
+    margin: 20px;
+    text-decoration: none;
+}
+.App{
+    background-color:#121212;
+}
+.navbar{
+    background-color: #000000;
+    height: 80px;
+}
+.cart{
+    color: black;
+}
+.balanciaga{
+    width: 5px;
+}
+.img-height{
+    height: 200px;
+width: 340px;
+}
+.cart-price{
+color: #A4A4A4;}
+.card .card-image .card-title{
+    color: red;
+    font-weight: 700;
+    font-size: 30px;
+}
+.item-desc{
+    color: white;
+}
+
+.home_title{
+    font-size: 50px;
+    color:green;
+}
+.card-price{
+    color: green;
+}
+.cart-order{
+    color: rgb(190, 233, 0);
+}
+.cart-orders{
+    font-size: 50px;
+    color:orange;
+}
+body{
+    background-color: #333;
+}
