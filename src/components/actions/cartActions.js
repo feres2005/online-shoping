@@ -1,5 +1,12 @@
 import { ADD_TO_CART,REMOVE_ITEM,SUB_QUANTITY,ADD_QUANTITY,ADD_SHIPPING } from './action_types/cart-actions'
 //add cart action
+
+
+export const fetchAllItem = () => {
+    
+}
+
+
 export const addToCart= (id)=>{
     return{
         type: ADD_TO_CART,

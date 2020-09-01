@@ -72,9 +72,7 @@ font-size: 25px;
     margin: 20px;
     text-decoration: none;
 }
-.App{
-    background-color:#121212;
-}
+
 .navbar{
     background-color: #000000;
     height: 80px;
@@ -102,7 +100,7 @@ color: #A4A4A4;}
 
 .home_title{
     font-size: 50px;
-    color:green;
+    color:whitesmoke;
 }
 .card-price{
     color: green;
@@ -116,4 +114,74 @@ color: #A4A4A4;}
 }
 body{
     background-color: #333;
+}
+.content{
+    display: flex;
+    flex-wrap: wrap;
+  
+}
+.main{
+    flex: 3 60rem;
+}
+.sidebar{
+    flex: 1 20rem;
+}
+/*products*/
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.products li{
+    flex: 1 1 29rem;
+    height: 47rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+.product{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.product img{
+    max-width: 37rem;
+    max-height: 37rem;
+}.product-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.product-price div,
+.product-price button{
+    text-align: center;
+    flex: 1;
+}
+.product-price div{
+    font-size: 2rem;
+}
+button{
+    padding: 1rem;
+    border: .1rem #c0c0c0 solid;
+    background-color:#ffffff;
+    cursor: pointer;
+}
+.button:hover{
+    border: .1rem #c8c8c8 solid;
+}
+.button-primary{
+    background-color: #ffc000;
+}
+body,
+input,
+select,
+button,
+textarea{
+    font-family: Montserrat,Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
 }

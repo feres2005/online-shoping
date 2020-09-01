@@ -1,28 +1,39 @@
 
-import React, { Component } from 'react';
-import {BrowserRouter, Route, Switch} from 'react-router-dom'
+import React from 'react';
 
-import Navbar from './components/Navbar'
-import Home from './components/Home'
-import Cart from './components/Cart'
+import data from "./data.json";
+
+
 import './index.css'
 
-class App extends Component {
+import Products from './components/Products';
+
+ class App extends React.Component {
+  constructor(){
+  super();
+  this.state = {
+    products: data.products,
+    size:"",
+    sort:"",
+  };
+  }
   render() {
     return (
-       <BrowserRouter>
-            <div className="App">
-            
-              <Navbar/>
-                <Switch>
-                    <Route exact path="/" component={Home}/>
-                    <Route path="/cart" component={Cart}/>
-                  </Switch>
-             </div>
-       </BrowserRouter>
-      
-    );
+<div className="grid-container">
+  <header>
+    <a href='/'>shoping Cart</a>
+  </header>
+  <main>
+    <div className="content">
+      <div className="main"><Products products={this.state.products}></Products></div>
+      <div className="sidebar"> cart </div>
+    </div>
+    
+  </main>
+  <footer>all right is reserved</footer>
+</div>
+
+    )
   }
 }
-
-export default App;
+export default App

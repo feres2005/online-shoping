@@ -9,6 +9,8 @@ import Item16 from '../images/16.jpg'
     
     handleClick = (id)=>{
         this.props.addToCart(id); 
+        // const item = this.props.itemList.find(item=> item.id=== id)
+        // axios.post("http://localhost:8000/product/add",item)
     }
 
     render(){

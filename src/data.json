@@ -1,0 +1,36 @@
+{
+"products":[
+   { "_id":"NIK",
+    "title": "NIKE",
+    "image":"/images/33.jpg",
+    "description":"about dress1",
+    "price":"1",
+    "availableSizes":["xxl","xl"]
+},
+{"_id":"NIKE2",
+    "title": "NIKE2",
+    "image":"/images/26.jpg",
+    "description":"about dress1",
+    "price":"19",
+    "availableSizes":["44","40"]},
+  { "_id":"NIKE3",
+    "title": "NIKE3",
+    "image":"/images/27.jpg",
+    "description":"about dress1",
+    "price":"19",
+    "availableSizes":["42","43"]},
+    {"_id":"JORDON",
+        "title": "Dress1",
+        "image":"/images/28.jpg",
+        "description":"about dress1",
+        "price":"19$",
+        "availableSizes":["45","39"]},
+
+        {"_id":"JORDON",
+          "title": "Dress1",
+          "image":"/images/28.jpg",
+          "description":"about dress1",
+          "price":"19$",
+          "availableSizes":["45","39"]}
+]
+}
