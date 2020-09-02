@@ -1,84 +1,43 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
-import { removeItem,addQuantity,subtractQuantity} from './actions/cartActions'
-import Recipe from './Recipe'
-import '../index.css'
-class Cart extends Component{
+import React, {Component} from 'react';
 
-    //to remove the item completely
-    handleRemove = (id)=>{
-        this.props.removeItem(id);
-    }
-    //to add the quantity
-    handleAddQuantity = (id)=>{
-        this.props.addQuantity(id);
-    }
-    //to substruct from the quantity
-    handleSubtractQuantity = (id)=>{
-        this.props.subtractQuantity(id);
-    }
-    render(){
-              
-        let addedItems = this.props.items.length ?
-            (  
-                this.props.items.map(item=>{
-                    return(
-                       
-                        <li className="collection-item avatar" key={item.id}>
-                                    <div className="item-img"> 
-                                        <img src={item.img} alt={item.img} className=""/>
-                                    </div>
-                                
-                                    <div className="item-desc">
-                                        <span className="title">{item.title}</span>
-                                        <p>{item.desc}</p>
-                                        <p className="card-price"><b>Price: {item.price}$</b></p> 
-                                        <p>
-                                            <b>Quantity: {item.quantity}</b> 
-                                        </p>
-                                        <div className="add-remove">
-                                            <Link to="/cart"><i className="material-icons" onClick={()=>{this.handleAddQuantity(item.id)}}>+</i></Link>
-                                            <Link to="/cart"><i className="material-icons" onClick={()=>{this.handleSubtractQuantity(item.id)}}>-</i></Link>
-                                        </div>
-                                        <button className="waves-effect waves-light btn pink remove" onClick={()=>{this.handleRemove(item.id)}}>x</button>
-                                    </div>
-                                    
-                                </li>
-                         
-                    )
-                })
-            ):
-
-             (
-                <p className="cart-orders">sorry you ordered Nothing.</p>
-             )
-       return(
-            <div className="container">
-                <div className="cart">
-                    <h3 className='cart-order'> You have ordered:</h3>
-                    <ul className="collection">
-                        {addedItems}
-                    </ul>
-                </div> 
-                <Recipe />          
+export default class Cart extends Component {
+    render() {
+        const {cartItems} =this.props;
+        return(
+            <div>
+                {cartItems.length ===0 ? (<div className="cart cart-header">cart is empty</div>)
+                :(<div className="cart cart-header">you have {cartItems.length} inthem  {' '}</div>)
+                };
+                   <div>
+                <div className='cart'>
+                <ul className='cart-items'>
+                    {cartItems.map(item =>(
+                        <li key={item._id}>
+                            <img src={item.image} alt={item.title}></img>
+                            <div>{item.title}</div>
+                            <div className='right'>
+                                {item.price}x{item.count}
+                            <button className="button" onClick={()=>this.props.removeFromCart(item)}>Remove</button></div>
+                        </li>
+                    ))}
+                    </ul></div>
+                    {cartItems.length!==0 &&(
+            <div className='cart'>
+            <div className='total'>
+                <div>
+                    Total:{" "}
+                    {cartItems.reduce((a,c) => a + c.count*c.price,0)}
+                </div>
+                <button className="button-primary">Procced in $</button>
             </div>
-       )
+        </div>
+
+                    )}
+                 </div>
+            </div>
+         
+        );
     }
 }
 
-
-const mapStateToProps = (state)=>{
-    return{
-        items: state.addedItems,
-        //addedItems: state.addedItems
-    }
-}
-const mapDispatchToProps = (dispatch)=>{
-    return{
-        removeItem: (id)=>{dispatch(removeItem(id))},
-        addQuantity: (id)=>{dispatch(addQuantity(id))},
-        subtractQuantity: (id)=>{dispatch(subtractQuantity(id))}
-    }
-}
-export default connect(mapStateToProps,mapDispatchToProps)(Cart)
+ 

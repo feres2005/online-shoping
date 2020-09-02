@@ -5,32 +5,32 @@
     "image":"/images/33.jpg",
     "description":"about dress1",
     "price":"1",
-    "availableSizes":["xxl","xl"]
+    "availableSizes":["XS","XL"]
 },
 {"_id":"NIKE2",
     "title": "NIKE2",
     "image":"/images/26.jpg",
     "description":"about dress1",
     "price":"19",
-    "availableSizes":["44","40"]},
+    "availableSizes":["S","XL"]},
   { "_id":"NIKE3",
     "title": "NIKE3",
     "image":"/images/27.jpg",
     "description":"about dress1",
     "price":"19",
-    "availableSizes":["42","43"]},
+    "availableSizes":["S","M"]},
     {"_id":"JORDON",
         "title": "Dress1",
         "image":"/images/28.jpg",
         "description":"about dress1",
         "price":"19$",
-        "availableSizes":["45","39"]},
+        "availableSizes":["XL","M"]},
 
         {"_id":"JORDON",
           "title": "Dress1",
           "image":"/images/28.jpg",
           "description":"about dress1",
           "price":"19$",
-          "availableSizes":["45","39"]}
+          "availableSizes":["M","S"]}
 ]
 }
